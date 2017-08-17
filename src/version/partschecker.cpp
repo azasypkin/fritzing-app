@@ -124,7 +124,7 @@ bool PartsChecker::newPartsAvailable(const QString &repoPath, const QString & sh
 
 
 #if LIBGIT2_VER_MINOR > 23
-    error = git_remote_connect(remote, GIT_DIRECTION_FETCH, &callbacks, NULL);
+    error = git_remote_connect(remote, GIT_DIRECTION_FETCH, &callbacks, NULL, NULL);
 #else
     error = git_remote_connect(remote, GIT_DIRECTION_FETCH, &callbacks);
 #endif
